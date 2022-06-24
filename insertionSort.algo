@@ -1,0 +1,20 @@
+PROCEDURE inserrtion_sort(VAR arr : ARRAY_OF INTEGER, VAR n : INTEGER)
+VAR
+    i, key, j : INTEGER ;
+BEGIN
+    FOR i FROM 0 TO n STEP step  DO
+        key := arr[ i ];
+        j := i — 1;
+        WHILE ( j >= 0 && arr[ j ]) DO
+            arr[ j+1] := arr[ j ];
+            j := j — 1;
+        END_WHILE
+        arr[j+1] := key;
+    END_FOR
+END
+ALGORITHM algorithm_name
+VAR
+    arr : ARRAY_OF INTEGER;
+BEGIN
+    inserrtion_sort(arr,n);
+END
